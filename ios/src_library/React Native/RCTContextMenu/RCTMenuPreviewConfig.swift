@@ -18,6 +18,7 @@ struct PreviewConfig {
   
   enum PreviewType: String {
     case DEFAULT;
+    case WEBVIEW;
     case CUSTOM;
   };
 
@@ -32,6 +33,7 @@ struct PreviewConfig {
   
   var previewType: PreviewType = .DEFAULT;
   var previewSize: PreviewSize = .INHERIT;
+  var previewUrl: String?;
   
   var isResizeAnimated = true;
   
@@ -63,6 +65,10 @@ extension PreviewConfig {
        let previewSize = PreviewSize(rawValue: string) {
       
       self.previewSize = previewSize;
+    };
+    
+    if let string = dictionary["previewUrl"] as? String {
+      self.previewUrl = string;
     };
     
     if let isResizeAnimated = dictionary["isResizeAnimated"] as? Bool {

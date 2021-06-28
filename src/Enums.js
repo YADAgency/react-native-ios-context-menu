@@ -30,6 +30,7 @@ export const MenuElementState = {
 /** Used for `PreviewConfigKeys.previewType` */
 export const PreviewType = {
   'DEFAULT': 'DEFAULT',
+  'WEBVIEW': 'WEBVIEW',
   'CUSTOM' : 'CUSTOM' ,
 };
 
@@ -54,6 +55,7 @@ export const IconConfigKeys = {
 export const PreviewConfigKeys = {
   previewType         : 'previewType'         , // optional - PreviewType value
   previewSize         : 'previewSize'         , // optional - PreviewSize value
+  previewUrl          : 'previewUrl'          , // optional - string
   isResizeAnimated    : 'isResizeAnimated'    , // optional - bool
   borderRadius        : 'borderRadius'        , // optional - number
   backgroundColor     : 'backgroundColor'     , // optional - string

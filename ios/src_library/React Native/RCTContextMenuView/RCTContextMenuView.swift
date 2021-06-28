@@ -6,7 +6,7 @@
 //
 
 import UIKit;
-
+import SafariServices;
 
 @available(iOS 13, *)
 class RCTContextMenuView: UIView {
@@ -199,6 +199,12 @@ fileprivate extension RCTContextMenuView {
     /// dont make preview if `previewType` is default.
     guard previewConfig.previewType != .DEFAULT
     else { return nil };
+    
+    if previewConfig.previewType == .WEBVIEW,
+       let string     = previewConfig.previewUrl,
+       let previewUrl = URL(string: string) {
+      return SFSafariViewController(url: previewUrl);
+    }
     
     let vc = RCTContextMenuPreviewController();
     vc.reactView = self.reactPreviewView;
