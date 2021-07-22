@@ -409,6 +409,7 @@ Enum string values you can use in a [￼`PreviewConfig`￼](#333-previewconfig-o
 | Value     | Description                                                  |
 | --------- | ------------------------------------------------------------ |
 | `DEFAULT` | The default value for the `previewSize` prop.<br/>Indicates that we don't want to use a custom context menu preview. |
+| `WEBVIEW` | Indicates that we want to show a webpage preview (using `SFSafariViewController`) |
 | `CUSTOM`  | Indicates that we want to use a custom context menu preview. |
 <br>
 
@@ -524,6 +525,7 @@ The object  you pass in the `ContextMenuView` compoent's  `previewConfig` prop. 
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | `previewType`<br/><br/>**Optional**: `String` ([￼`PreviewType`￼](#325-previewtype-enum) value)<br/>**Default**: `DEFAULT` | Contols the type of preview to show when the context menu is visible. |
 | `previewSize`<br/><br/>**Optional**: `String` ([￼`PreviewSize`￼](#326-previewsize-enum) value)<br/>**Default**: `INHERIT` | Controls the size of the context menu preview.               |
+| `previewUrl`<br/><br/>**Optional**: `String` | The URL of the webpage to show when using `PreviewType.WEBVIEW`. |
 | `isResizeAnimated`<br/><br/>**Optional**: `Bool`<br/>**Default**: `true` | Controls whether or not the context menu preview should animate the view's size changes. |
 | `borderRadius`<br/><br/>**Optional**: `Number`               | The radius of the context menu preview. When no value is provided,  it will use the system default value. |
 | `backgroundColor`<br/><br/>**Optional**: `String`<br/>**Default**: `transparent` | Sets the background color of the context menu preview.       |
